@@ -8,7 +8,7 @@ import javax.swing.*;
 // chỉnh JLabel hoặc JButton nha :3
 
 public class Img_Giver {
-	private static String pathCanon;
+	public static String pathCanon;
 	
 	public Img_Giver() {
 		try {
@@ -23,7 +23,12 @@ public class Img_Giver {
 		return;
 	}
 	
-	public void imgTheDealer(JButton bt) {
+	public void imgTheDealer(JLabel lb) {
+		lb.setIcon(new ImageIcon(new ImageIcon(pathCanon + "\\src\\images\\TheDealer.jpg").getImage().getScaledInstance(lb.getSize().width, lb.getSize().height, Image.SCALE_SMOOTH)));
+		return;
+	}
+	
+	public void imgTheDealer_bt(JButton bt) {
 		bt.setIcon(new ImageIcon(new ImageIcon(pathCanon + "\\src\\images\\TheDealer.jpg").getImage().getScaledInstance(bt.getSize().width, bt.getSize().height, Image.SCALE_SMOOTH)));
 		return;
 	}

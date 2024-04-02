@@ -3,6 +3,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -10,6 +12,7 @@ import java.awt.event.ActionListener;
 
 import javax.swing.SwingConstants;
 import javax.swing.border.BevelBorder;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 import images.*;
@@ -61,7 +64,7 @@ public class Home extends JFrame {
 			public void run() {
 				try {
 					Home frame = new Home();
-					frame.setVisible(true);
+					frame.setVisible(true);					
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -69,10 +72,146 @@ public class Home extends JFrame {
 		});
 	}
 
+	
+	private static void Introduction() {
+		// Chuẩn bị JFrame
+		JFrame jframe = new JFrame(":3");
+		
+		// Chuẩn bị JLabel, để chỉnh ảnh một cách đa năng
+		JLabel lb_anh = new JLabel();
+		lb_anh.setBounds(10, 10, 845, 219);
+		
+		Introduction intro = new Introduction();
+		
+		imgGiver.imgNhau(lb_anh);
+		intro.scene(jframe, lb_anh, "cốt truyện", "Trong 1 buổi nhậu , bạn uống 5 lon bia trong 1 quãng thời gian ngắn\r\n\r\nsau đó bạn cảm thấy người say như điếu đổ, bạn ngồi đó, từ từ khép 2 đôi mắt nặng trĩu của bạn lại...", "Tiếp tục");
+		
+		imgGiver.imgwhite(lb_anh);
+		intro.scene(jframe, lb_anh, "...", "zzz", "Tiếp tục");
+		
+		imgGiver.imgwhite(lb_anh);
+		intro.scene(jframe, lb_anh, "...", "zzzzzzzzzzzzzzzzzzzzzzzz", "Tiếp tục");
+		
+		imgGiver.imgwhite(lb_anh);
+		intro.scene(jframe, lb_anh, "...", "zzzzz", "Tiếp tục");
+		
+		imgGiver.imgTheDealer(lb_anh);
+		intro.scene(jframe, lb_anh, "NGƯỜI BÍ ẨN ???", "BÙM", "Tiếp tục");
+		
+		imgGiver.imgTheDealer(lb_anh);
+		intro.scene(jframe, lb_anh, "NGƯỜI BÍ ẨN ???", "Bạn tỉnh giấc!", "Tiếp tục");
+		
+		imgGiver.imgTheDealer(lb_anh);
+		intro.scene(jframe, lb_anh, "NGƯỜI BÍ ẨN ???", "NGƯỜI BÍ ẨN: chà ngươi đã tỉnh dậy rồi sao!.", "...");
+		
+		imgGiver.imgTheDealer(lb_anh);
+		intro.scene(jframe, lb_anh, "NGƯỜI BÍ ẨN ???", "Bạn: Ngươi, NGƯƠI LÀ AI!", "...");
+		
+		imgGiver.imgTheDealer(lb_anh);
+		intro.scene(jframe, lb_anh, "NGƯỜI BÍ ẨN ???", "NGƯỜI BÍ ẨN: ta là ai không quan trọng , điều quan trọng ở đây là NGƯƠI, mắc nợ ta 9 kiếp rồi mà chưa chịu trả", "hả");
+		
+		imgGiver.imgTheDealer(lb_anh);
+		intro.scene(jframe, lb_anh, "NGƯỜI BÍ ẨN ???", "Bạn: hả?", "Tiếp tục");
+		
+		imgGiver.imgTheDealer(lb_anh);
+		intro.scene(jframe, lb_anh, "NGƯỜI BÍ ẨN ???", "NGƯỜI BÍ ẨN: mà điều đó hiện tại không quan trọng, bây giờ ta sẽ cho ngươi 10$, đô la USA xịn xò con bò luôn !", "Tiếp tục");
+		
+		imgGiver.imgTheDealer(lb_anh);
+		intro.scene(jframe, lb_anh, "NGƯỜI BÍ ẨN ???", "Bạn: Thiệt không?", "Tiếp tục");
+		
+		imgGiver.imgTheDealer(lb_anh);
+		intro.scene(jframe, lb_anh, "NGƯỜI BÍ ẨN ???", "NGƯỜI BÍ ẨN: thiệt, đổi lại ngươi sẽ nợ ta 10000$ !!!", "NANIIIIIII");
+		
+		imgGiver.imgTheDealer(lb_anh);
+		intro.scene(jframe, lb_anh, "NGƯỜI BÍ ẨN ???", "Bạn: NANI !!!", "Tiếp tục");
+		
+		imgGiver.imgTheDealer(lb_anh);
+		intro.scene(jframe, lb_anh, "NGƯỜI BÍ ẨN ???", "NGƯỜI BÍ ẨN: Được rồi, bây giờ hãy ĐI RA NGOÀI ĐỒNG VÀ LÀM VIỆC CHO TA, ta ngồi chờ ở trong này, ta giao nhiệm vụ cho ngươi là kiếm 10000$ và trả lại cho ta :D", "Tiếp tục");
+	}
+
+	
+	// Bảo để sẵn method Win() đây, khi nào phá đảo game thì chạy.
+	private static void Win() {
+		// Chuẩn bị JFrame
+		JFrame jframe = new JFrame(":3");
+		
+		// Chuẩn bị JLabel, để chỉnh ảnh một cách đa năng
+		JLabel lb_anh = new JLabel();
+		lb_anh.setBounds(10, 10, 845, 219);
+		
+		Win win = new Win();
+		
+		imgGiver.imgTheDealer(lb_anh);
+		win.scene(jframe, lb_anh, "kết thúc.", "NGƯỜI BÍ ẨN: chà hãy nhìn vào ngươi xem...", "...");
+		
+		imgGiver.imgTheDealer(lb_anh);
+		win.scene(jframe, lb_anh, "kết thúc.", "NGƯỜI BÍ ẨN:...", "...");
+		
+		imgGiver.imgTheDealer(lb_anh);
+		win.scene(jframe, lb_anh, "kết thúc.", "NGƯỜI BÍ ẨN: Nhà người còn chờ gì nữa?, mau đưa cho ta, cái túi đó, TÚI CHỨA TIỀN !!!", "...");
+		
+		imgGiver.imgTheDealer(lb_anh);
+		win.scene(jframe, lb_anh, "kết thúc.", "(bạn đưa túi tiền chứa nhiều hơn 10000$ cho người bí ẩn...)", "...");
+		
+		imgGiver.imgTheDealer(lb_anh);
+		win.scene(jframe, lb_anh, "kết thúc.", "NGƯỜI BÍ ẨN:...", "...");
+		
+		imgGiver.imgTheDealer(lb_anh);
+		win.scene(jframe, lb_anh, "kết thúc.", "NGƯỜI BÍ ẨN:.......", "...");
+		
+		imgGiver.imgTheDealer(lb_anh);
+		win.scene(jframe, lb_anh, "kết thúc.", "NGƯỜI BÍ ẨN: E Hèm, được rồi...", "Tiếp tục");
+		
+		imgGiver.imgTheDealer(lb_anh);
+		win.scene(jframe, lb_anh, "???", "(Người bí ẩn dần dần lộ diện...)", "Tiếp tục");
+		
+		imgGiver.imgcat1(lb_anh);
+		win.scene(jframe, lb_anh, "MÈO CON !!!", "MÈO CON: Nhà ngươi có thể đi...", ":3");
+		
+		imgGiver.imgcat1(lb_anh);
+		win.scene(jframe, lb_anh, "MÈO CON !!!", "MÈO CON: Mặc dầu...", ":3");
+		
+		imgGiver.imgcat1(lb_anh);
+		win.scene(jframe, lb_anh, "MÈO CON !!!", "MÈO CON: ...", ":3");
+		
+		imgGiver.imgcat1(lb_anh);
+		win.scene(jframe, lb_anh, "MÈO CON !!!", "MÈO CON: Ta đã hy vọng ngươi là người có khả năng sẽ đạt tới hạt giống \"???\" thứ 15 đấy cơ", ":3");
+		
+		imgGiver.imgcat1(lb_anh);
+		win.scene(jframe, lb_anh, "MÈO CON !!!", "MÈO CON: ...", ":3");
+		
+		imgGiver.imgcat2(lb_anh);
+		win.scene(jframe, lb_anh, "MÈO CON !!!", "MÈO CON: TA CUỐI CÙNG CŨNG CÓ TIỀN ĐI ĐÁNH BI-DA RỒI, CẢM ƠN NHÀ NGƯƠI NHIỀU !!!", ":3");
+		
+		imgGiver.imgwhite(lb_anh);
+		win.scene(jframe, lb_anh, "CHÚC MỪNG BẠN ĐÃ CHIẾN THẮNG GAME", "(Mèo con chạy mất tiêu...)", ":3");
+		
+		imgGiver.imgwhite(lb_anh);
+		win.scene(jframe, lb_anh, "CHÚC MỪNG BẠN ĐÃ CHIẾN THẮNG GAME", "chạy mất tiêu...", ":3");
+		
+		imgGiver.imgwhite(lb_anh);
+		win.scene(jframe, lb_anh, "CHÚC MỪNG BẠN ĐÃ CHIẾN THẮNG GAME", "mất tiêu...", ":3");
+		
+		imgGiver.imgwhite(lb_anh);
+		win.scene(jframe, lb_anh, "CHÚC MỪNG BẠN ĐÃ CHIẾN THẮNG GAME", "tiêu...", "...");
+		
+		imgGiver.imgwhite(lb_anh);
+		win.scene(jframe, lb_anh, "CHÚC MỪNG BẠN ĐÃ CHIẾN THẮNG GAME", "...", ".");
+		
+		imgGiver.imgwhite(lb_anh);
+		win.scene(jframe, lb_anh, "CHÚC MỪNG BẠN ĐÃ CHIẾN THẮNG GAME", "...", "");
+		
+		JOptionPane.showMessageDialog(null, "Side Java project được Re-code bởi: Cao Hoàng Phước Bảo, Dương Đính, Lê Hữu Anh Tú.", "Credits", JOptionPane.PLAIN_MESSAGE);
+		System.exit(0);	
+	}
+	
+	
+	@SuppressWarnings("static-access")
 	public Home() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1500, 800);
+		setBounds(0, 0, 1500, 800);
 		setResizable(false);
+		setIconImage((new ImageIcon(imgGiver.pathCanon + "\\src\\images\\cat2.jpeg")).getImage());
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -275,7 +414,15 @@ public class Home extends JFrame {
 		
 		bt_Win = new JButton("");
 		bt_Win.setBounds(1340, 10, 85, 60);
-		imgGiver.imgTheDealer(bt_Win);
+		imgGiver.imgTheDealer_bt(bt_Win);
+		bt_Win.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO
+				Win();
+			}
+		});
 		menuPad.add(bt_Win);
 		
 		lb_tien = new JLabel("Tiền của bạn: ?? $");
@@ -290,5 +437,15 @@ public class Home extends JFrame {
 		lb_giongCayTrong.setForeground(new Color(0, 196, 0));
 		lb_giongCayTrong.setBounds(186, 67, 1033, 37);
 		menuPad.add(lb_giongCayTrong);
+		
+		
+		
+		// sau UI đã load xong, bắt đầu chạy phần giới thiệu
+		Introduction();
+		
+		
+		
+		
+		
 	}
 }

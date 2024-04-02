@@ -205,18 +205,17 @@ public class Home extends JFrame {
 		System.exit(0);	
 	}
 	
-	
-	@SuppressWarnings("static-access")
 	public Home() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(0, 0, 1500, 800);
 		setResizable(false);
-		setIconImage((new ImageIcon(imgGiver.pathCanon + "\\src\\images\\cat2.jpeg")).getImage());
+		setIconImage((new ImageIcon(imgGiver.getClass().getResource("cat2.jpeg")).getImage()));
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
+		
 		
 		JPanel plot1 = new JPanel();
 		plot1.setBounds(50, 45, 216, 221);

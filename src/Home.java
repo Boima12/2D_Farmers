@@ -5,6 +5,9 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.SwingConstants;
 import javax.swing.border.BevelBorder;
 import javax.swing.JButton;
@@ -256,6 +259,18 @@ public class Home extends JFrame {
 		bt_Home_Crop = new JButton("");
 		bt_Home_Crop.setBounds(10, 10, 85, 60);
 		imgGiver.imgsprout(bt_Home_Crop);
+		bt_Home_Crop.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO
+				JFrame jframe = new JFrame(":3");
+				
+				Home_Crop homeCrop = new Home_Crop();
+				homeCrop.ChooseCrop(jframe);
+				
+			}
+		});
 		menuPad.add(bt_Home_Crop);
 		
 		bt_Win = new JButton("");

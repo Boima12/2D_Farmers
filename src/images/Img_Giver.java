@@ -214,6 +214,12 @@ public class Img_Giver {
 	}
 	
 	
+	public void imgHome_Crop1(JLabel lb) {
+		lb.setIcon(new ImageIcon(new ImageIcon(pathCanon + "\\src\\images\\Home_Crop1.jpg").getImage().getScaledInstance(lb.getSize().width, lb.getSize().height, Image.SCALE_SMOOTH)));
+		return;
+	}
+	
+	
 	public void imgNhau(JLabel lb) {
 		lb.setIcon(new ImageIcon(new ImageIcon(pathCanon + "\\src\\images\\Nhau.jpeg").getImage().getScaledInstance(lb.getSize().width, lb.getSize().height, Image.SCALE_SMOOTH)));
 		return;

@@ -16,8 +16,11 @@ import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 import images.*;
+import music.Nhac;
 
 public class Home extends JFrame {
+
+	private Nhac tracks1;
 	
 	// chỉnh ảnh thông qua lớp Img_PathGiver cho tiện
 	private static Img_Giver imgGiver = new Img_Giver();
@@ -73,7 +76,7 @@ public class Home extends JFrame {
 	}
 
 	
-	private static void Introduction() {
+	private void Introduction() {
 		// Chuẩn bị JFrame
 		JFrame jframe = new JFrame(":3");
 		
@@ -94,6 +97,9 @@ public class Home extends JFrame {
 		
 		imgGiver.imgwhite(lb_anh);
 		intro.scene(jframe, lb_anh, "...", "zzzzz", "Tiếp tục");
+
+		tracks1.song1();
+		tracks1.playTrack();
 		
 		imgGiver.imgTheDealer(lb_anh);
 		intro.scene(jframe, lb_anh, "NGƯỜI BÍ ẨN ???", "BÙM", "Tiếp tục");
@@ -124,14 +130,19 @@ public class Home extends JFrame {
 		
 		imgGiver.imgTheDealer(lb_anh);
 		intro.scene(jframe, lb_anh, "NGƯỜI BÍ ẨN ???", "Bạn: NANI !!!", "Tiếp tục");
+
+		tracks1.stopTrack();
 		
 		imgGiver.imgTheDealer(lb_anh);
 		intro.scene(jframe, lb_anh, "NGƯỜI BÍ ẨN ???", "NGƯỜI BÍ ẨN: Được rồi, bây giờ hãy ĐI RA NGOÀI ĐỒNG VÀ LÀM VIỆC CHO TA, ta ngồi chờ ở trong này, ta giao nhiệm vụ cho ngươi là kiếm 10000$ và trả lại cho ta :D", "Tiếp tục");
+
+		tracks1.song2();
+		tracks1.playTrack();
 	}
 
 	
 	// Bảo để sẵn method Win() đây, khi nào phá đảo game thì chạy.
-	private static void Win() {
+	private void Win() {
 		// Chuẩn bị JFrame
 		JFrame jframe = new JFrame(":3");
 		
@@ -140,6 +151,10 @@ public class Home extends JFrame {
 		lb_anh.setBounds(10, 10, 845, 219);
 		
 		Win win = new Win();
+
+		tracks1.stopTrack();
+		tracks1.song3();
+		tracks1.playTrack();
 		
 		imgGiver.imgTheDealer(lb_anh);
 		win.scene(jframe, lb_anh, "kết thúc.", "NGƯỜI BÍ ẨN: chà hãy nhìn vào ngươi xem...", "...");
@@ -202,10 +217,14 @@ public class Home extends JFrame {
 		win.scene(jframe, lb_anh, "CHÚC MỪNG BẠN ĐÃ CHIẾN THẮNG GAME", "...", "");
 		
 		JOptionPane.showMessageDialog(null, "Side Java project được Re-code bởi: Cao Hoàng Phước Bảo, Dương Đính, Lê Hữu Anh Tú.", "Credits", JOptionPane.PLAIN_MESSAGE);
+		tracks1.stopTrack();
 		System.exit(0);	
 	}
 	
 	public Home() {
+
+		tracks1 = new Nhac();
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(0, 0, 1500, 800);
 		setResizable(false);
